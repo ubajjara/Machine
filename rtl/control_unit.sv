@@ -103,11 +103,13 @@ module control_unit(
         case (state)
 
             IDLE: begin
-                // Nenhuma saída ativa
+                if (coin_in != 2'b00)
+                    credit_load = 1'b1;
             end
 
             COLLECT: begin
-                credit_load = 1'b1;
+                if (coin_in != 2'b00)
+                    credit_load = 1'b1;
             end
 
             CHECK: begin

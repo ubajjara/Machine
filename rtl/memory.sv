@@ -1,5 +1,3 @@
-import vending_pkg::*;
-
 module memory(
     input  logic       clk,
     input  logic       rst,
@@ -11,6 +9,7 @@ module memory(
     output logic [7:0] price,
     output logic [7:0] stock
 );
+    import vending_pkg::*;
 
     logic [15:0] mem [0:NUM_ITEMS-1];
 
@@ -21,7 +20,7 @@ module memory(
         mem[3] = {PRICE_SNACK, STOCK_SNACK};
     end
 
-    always_ff @(posedge clk) begin
+    always @(posedge clk) begin
         if (rst) begin
             mem[0] <= {PRICE_CAFE,  STOCK_CAFE};
             mem[1] <= {PRICE_AGUA,  STOCK_AGUA};

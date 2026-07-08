@@ -81,7 +81,7 @@ module vending_top(
         end else if (cancel) begin
 
             change_out <= credit;
-        end else if (state_out == 3'b100) begin
+        end else if (state_out == 3'b011) begin
 
             change_out <= change;
         end else if (state_out == 3'b101) begin
