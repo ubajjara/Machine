@@ -1,4 +1,3 @@
-import vending_pkg::*;
 
 module control_unit(
     input  logic       clk,
@@ -17,7 +16,7 @@ module control_unit(
     output logic       error,
     output logic [2:0] state_out
 );
-
+    import vending_pkg::*;
     state_t state, next_state;
 
     // Usado para esperar 1 ciclo da leitura síncrona da memória no estado CHECK

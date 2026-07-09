@@ -1,5 +1,3 @@
-import vending_pkg::*;
-
 module registrador_credito(
     input  logic       clk,
     input  logic       rst,
@@ -10,7 +8,7 @@ module registrador_credito(
 
     output logic [7:0] credit
 );
-
+    import vending_pkg::*;
     logic [7:0] coin_value;
 
     always_comb begin

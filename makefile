@@ -57,6 +57,10 @@ run: compile
 wave:
 	verdi -ssf waves.fsdb &
 
+synth:
+	dc_shell -f $(SYNTH_DIR)/synth.tcl
+
+
 clean_sim:
 	rm -rf \
 		csrc \
@@ -72,3 +76,5 @@ clean_sim:
 		.vlogan* \
 		*.fsdb \
 		*.log
+
+.PHONY: syntax compile run wave synth clean_sim
