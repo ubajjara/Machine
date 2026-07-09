@@ -77,4 +77,17 @@ clean_sim:
 		*.fsdb \
 		*.log
 
+clean_synth:
+	rm -rf \
+		work \
+		$(SYNTH_DIR)/reports/*.rpt \
+		$(SYNTH_DIR)/reports/*.ddc \
+		$(SYNTH_DIR)/reports/*.db \
+		$(SYNTH_DIR)/reports/*_syn.v \
+		$(SYNTH_DIR)/*.ddc \
+		$(SYNTH_DIR)/*.v \
+		default.svf
+
+clean: clean_sim clean_synth
+
 .PHONY: syntax compile run wave synth clean_sim

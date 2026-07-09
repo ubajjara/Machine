@@ -44,7 +44,8 @@ report_timing -max_paths 10
 #Inicio da síntese
 
 
-compile_ultra -no_autoungroup
+compile_ultra 
+#-no_autoungroup
 
 #relatorios
 

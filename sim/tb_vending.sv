@@ -251,4 +251,3 @@ module tb_vending;
         $finish;
     end
 endmodule
-
