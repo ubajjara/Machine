@@ -1,4 +1,4 @@
-module Comparador(
+module comparator(
     input logic [7:0] credit,
     input logic [7:0] price,
     input logic [7:0] stock,
