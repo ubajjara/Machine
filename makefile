@@ -10,10 +10,10 @@ SYNTH_DIR = synth
 PKG_FILES = $(RTL_DIR)/vending_pkg.sv
 
 RTL_FILES = \
-		 $(RTL_DIR)/Comparador.sv \
+		 $(RTL_DIR)/comparator.sv \
 		 $(RTL_DIR)/control_unit.sv \
 		 $(RTL_DIR)/memory.sv \
-		 $(RTL_DIR)/registrador_credito.sv \
+		 $(RTL_DIR)/credit_reg.sv \
 		 $(RTL_DIR)/subtrator.sv \
 		 $(RTL_DIR)/vending_top.sv
 

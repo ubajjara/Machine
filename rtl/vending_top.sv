@@ -40,7 +40,7 @@ module vending_top(
         .state_out    (state_out)
     );
 
-    registrador_credito credit_inst (
+    credit_reg credit_inst (
         .clk          (clk),
         .rst          (rst),
         .credit_load  (credit_load),
@@ -59,7 +59,7 @@ module vending_top(
         .stock     (stock)
     );
 
-    Comparador comp_inst (
+    comparator comp_inst (
         .credit   (credit),
         .price    (price),
         .stock    (stock),

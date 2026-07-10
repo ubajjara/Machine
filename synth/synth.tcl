@@ -7,10 +7,10 @@ source synth/.synopsys_dc.setup
 
 analyze -format sverilog {
 	rtl/vending_pkg.sv
-	rtl/Comparador.sv
+	rtl/comparator.sv
 	rtl/control_unit.sv
 	rtl/memory.sv
-	rtl/registrador_credito.sv
+	rtl/credit_reg.sv
 	rtl/subtrator.sv
 	rtl/vending_top.sv
 }
@@ -44,8 +44,7 @@ report_timing -max_paths 10
 #Inicio da síntese
 
 
-compile_ultra 
-#-no_autoungroup
+compile_ultra -no_autoungroup
 
 #relatorios
 

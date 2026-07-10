@@ -1,4 +1,4 @@
-module registrador_credito(
+module credit_reg(
     input  logic       clk,
     input  logic       rst,
 
