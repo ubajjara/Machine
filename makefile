@@ -74,20 +74,28 @@ clean_sim:
 		vfastLog \
 		work.lib++ \
 		.vlogan* \
-		*.fsdb \
-		*.log
+		*.fsdb
 
 clean_synth:
 	rm -rf \
 		work \
 		$(SYNTH_DIR)/reports/*.rpt \
-		$(SYNTH_DIR)/reports/*.ddc \
-		$(SYNTH_DIR)/reports/*.db \
-		$(SYNTH_DIR)/reports/*_syn.v \
+		$(SYNTH_DIR)/reports/*.svf \
 		$(SYNTH_DIR)/*.ddc \
-		$(SYNTH_DIR)/*.v \
-		default.svf
+		$(SYNTH_DIR)/*_netlist.v \
+		$(SYNTH_DIR)/synth.log \
+		default.svf \
+		command.log
 
-clean: clean_sim clean_synth
+clean_fm:
+	rm -rf \
+		FM_INFO* \
+		FM_WORK* \
+		formality*_svf \
+		fm/*.log \
+		fm/*.lck \
+		fm/reports/*.rpt
+
+clean: clean_sim clean_synth clean_fm
 
 .PHONY: syntax compile run wave synth clean_sim

@@ -42,9 +42,10 @@ report_timing -max_paths 10
 
 
 #Inicio da síntese
+set_svf synth/reports/default.svf
 
-
-compile_ultra -no_autoungroup
+compile_ultra 
+# -no_autoungroup
 
 #relatorios
 
@@ -66,7 +67,7 @@ report_constraint -all_violators
 
 #Exportar netlist
 
-write -format verilog -hierarchy -output synth/vending_top_syn.v
+write -format verilog -hierarchy -output synth/vending_top_netlist.v
 
-write -format ddc -hierarchy -output synth/vending_top_syn.ddc
+write -format ddc -hierarchy -output synth/vending_top_netlist.ddc
 
